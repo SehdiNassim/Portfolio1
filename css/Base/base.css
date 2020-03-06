@@ -1,0 +1,45 @@
+:root{
+    --main-color:#b92747de;
+    --dark: #272627;
+    --body-background:rgb(226, 219, 209);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-background);
+}
+
+button:focus{
+    outline: none;
+}
+
+@media only screen and (min-width:768px){
+    body{
+        padding: 10vh;
+    }
+}
+
+section{
+    position: relative;
+}
+
+section {
+    position: relative;
+    transition: max-height 1s cubic-bezier(1,-0.03, 0.11, 1.32);
+    overflow-y: hidden;
+}   
+
+.is-open{
+    max-height: 100%;
+}
+
+.is-closed{
+    max-height: 0px;
+}
+
+.haya{
+    background-color:var(--main-color);
+    height: 300px;
+    width: 100%;
+}

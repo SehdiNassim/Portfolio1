@@ -1,0 +1,100 @@
+.nav-bar{
+    background-color: var(--main-color);
+    height: 100px;
+    position: relative;
+    box-shadow: 0px -3px 3px rgba(0, 0, 0, .1) ;
+}
+
+
+
+.navbar-btn{
+    position: relative;
+    padding: 0 20px;
+    box-sizing: content-box;
+    height: 100%;
+    border-style: none;
+    margin: 0 20px;
+}
+
+.navbar-btn-icon{
+    width: 40px;
+    margin: 15px;
+}
+
+.navbar-btn-p{
+    position: relative;
+    font-size: 1rem;
+    color: white;
+}
+
+.is-not-clicked{
+    background-color: transparent;
+    transition: ease-in .3s all;
+}
+.is-not-clicked:hover{
+    transform: translateY(-5%);
+}
+.is-clicked{
+    background-color:white;
+    height: 100%;
+    
+}
+.is-clicked> .navbar-btn-icon{
+    animation-name: upDown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.is-clicked > .navbar-btn-p{
+    color: var(--main-color);
+}
+
+@keyframes upDown{
+    0%,30%,100%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translateY(-50%);
+    }
+}
+
+@media only screen and (min-width:992px){
+    
+    .is-clicked{
+        padding-top: 10px;
+        transform: translateY(-8px);
+    }
+}
+@media only screen and (max-width:992px){
+    .navbar-btn{
+        margin: 0 10px;
+        padding: 0;
+        /* box-sizing: border-box; */
+    }
+    .is-clicked{
+        padding-top: 10px;
+        transform: translateY(-10%);
+    }
+
+}
+
+@media only screen and (max-width:768px){
+    .nav-bar{
+        height: 80px;
+    }
+    .navbar-btn{
+        margin: 0;
+        /* box-sizing: border-box; */
+    }
+    .is-clicked{
+        padding-top: 0;
+        transform: translateY(0);
+    }
+    .navbar-btn-icon{
+        width: 30%;
+    }
+    .navbar-btn-p{
+        display: none;
+    }
+}
+
+
